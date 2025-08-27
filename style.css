@@ -1,0 +1,275 @@
+/* Google Fonts - Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+:root {
+    --primary-bg-color: #fcfaf6; /* Light cream/beige */
+    --secondary-bg-color: #f2ede6; /* Slightly darker cream */
+    --text-color: #333;
+    --light-text-color: #666;
+    --accent-color: #a8a09a; /* Muted brown/taupe */
+    --button-bg-color: #8c837b;
+    --button-hover-color: #7a7067;
+    --border-color: #ddd;
+    --font-family-sans: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-bg-color);
+    background-image: url('image/background.png');
+    background-size: cover;
+    background-attachment: fixed; /* 배경 이미지가 스크롤과 함께 움직이지 않도록 고정 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-bg-color);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+    vertical-align: middle;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-color);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--button-bg-color);
+    color: var(--primary-bg-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: var(--button-hover-color);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.search-container input[type="text"] {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 400px;
+    font-family: var(--font-family-sans);
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.search-container button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--button-bg-color);
+    color: var(--primary-bg-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-family-sans);
+}
+
+.search-container button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.result-container {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.result-container p {
+    margin-bottom: 0.5rem;
+}
+
+.result-container p strong {
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--secondary-bg-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.gallery-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--primary-bg-color);
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+}
+
+.flower-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item h3 {
+    font-size: 1.5rem; /* Slightly larger */
+    color: var(--text-color); /* Darker color for emphasis */
+    margin-bottom: 0.8rem; /* Adjusted margin */
+}
+
+.gallery-item p {
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+
+.pagination-controls {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination-controls button {
+    padding: 0.7rem 1.2rem;
+    background-color: var(--button-bg-color);
+    color: var(--primary-bg-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-family-sans);
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: var(--button-hover-color);
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#page-info {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
